@@ -1,0 +1,7 @@
+# Ejecutables y binarios de C++
+*.exe
+*.out
+*.o
+
+# Configuración del entorno de desarrollo
+.vscode/
