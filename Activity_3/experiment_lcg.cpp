@@ -37,12 +37,11 @@ int main() {
             double elapsed = std::chrono::duration<double>(t1 - t0).count();
             if (elapsed < best) best = elapsed;
         }
-        // Prevent the compiler from treating finalR as dead: print a
-        // checksum digit (harmless, keeps the computation "used").
+
         volatile uint64_t sink = finalR;
         (void)sink;
 
-        uint64_t count = n; // by construction, exactly n iterations ran
+        uint64_t count = n; 
         csv << n << "," << count << "," << std::setprecision(9) << best << "\n";
 
         std::cout << std::setw(9) << n << " | "
